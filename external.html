@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Card</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            font-family: Arial, sans-serif;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .info h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .info p {
+            margin: 0;
+            color: #777;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .follow {
+            background: #4e73df;
+            color: white;
+        }
+
+        .message {
+            background: #1cc88a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="data:image/jpeg;base64,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" class="profile-img">
+            <div class="info">
+                <h2>Satakshi srivastava</h2>
+                <p>B.Tech CSE Student</p>
+                <p>ABES Engineering College</p>
+            </div>
+            <div class="buttons">
+                <button class="btn follow">Follow</button>
+                <button class="btn message">Message</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
